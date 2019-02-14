@@ -6,7 +6,11 @@
 {% block content %}
 <form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
   {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" value="Update">
+  {{form|crispy}}
+
+  <a class="navbar-brand  " href="{% url 'destination-list' %}">
+  <input type="submit" value="Update btn btn-outline-danger -lg btn-block">
+</a>
+
 </form>
 {% endblock content %}
