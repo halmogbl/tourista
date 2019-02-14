@@ -8,9 +8,10 @@
   {% csrf_token %}
   {{form|crispy}}
 
-  <a class="navbar-brand  " href="{% url 'destination-list' %}">
-  <input type="submit" value="Update btn btn-outline-danger -lg btn-block">
-</a>
+  <a class="navbar-brand  " href="{% url 'destination-list' %}"></a>
+  
+  <button type="submit" class="btn btn-secondary btn-lg btn-block">Update</button>
+
 
 </form>
 {% endblock content %}
